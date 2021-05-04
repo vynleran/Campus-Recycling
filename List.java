@@ -1,47 +1,47 @@
 // the Node class
-class Node
+class Node<type>
 {
-	private String data;
-	private Node link;
+	private type data;
+	private Node<type> link;
 
 	// constructor
 	public Node()
 	{
-		this.data = " ";
+		this.data = null;
 		this.link = null;
 	}
 
 	// accessor and mutator for the data component
-	public String getData()
+	public type getData()
 	{
 		return this.data;
 	}
 
-	public void setData(String data)
+	public void setData(type data)
 	{
 		this.data = data;
 	}
 
 	// accessor and mutator for the link component
-	public Node getLink()
+	public Node<type> getLink()
 	{
 		return this.link;
 	}
 
-	public void setLink(Node link)
+	public void setLink(Node<type> link)
 	{
 		this.link = link;
 	}
 }
 
 // the List class
-public class List
+public class List<type>
 {
 	public static final int MAX_SIZE = 50;
 
-	private Node head;
-	private Node tail;
-	private Node curr;
+	private Node<type> head;
+	private Node<type> tail;
+	private Node<type> curr;
 	private int num_items;
 
 	// constructor
@@ -54,11 +54,11 @@ public class List
 
 	// copy constructor
 	// clones the list l and sets the last element as the current
-	public List(List l)
+	public List(List<type> l)
 	{
 		head = tail = curr = null;
 		num_items = 0;
-		Node temp = l.head;
+		Node<type> temp = l.head;
 
 		while(temp != null)
 		{
@@ -100,7 +100,7 @@ public class List
 	{
 		if(!IsEmpty())
 		{
-			Node temp = head;
+			Node<type> temp = head;
 			while (temp.getLink() != curr)
 			{
 				temp = temp.getLink();
@@ -126,7 +126,7 @@ public class List
 			return -1;
 		}
 		
-		Node temp = head;
+		Node<type> temp = head;
 		int i = 0;
 		while (temp != curr && temp != null)
 		{
@@ -137,7 +137,7 @@ public class List
 	}
 
 	// returns the value of the current element (or -1)
-	public String GetValue()
+	public type GetValue()
 	{
 		if(IsEmpty())
 			return null;
@@ -154,7 +154,7 @@ public class List
 	// inserts an item before the current element
 	// the new element becomes the current
 	// this should not be possible for a full list
-	public void InsertBefore(String data)
+	public void InsertBefore(type data)
 	{
 		if(!IsFull())
 		{
@@ -162,7 +162,7 @@ public class List
 				InsertAfter(data);
 			else if(head == curr)
 			{
-				Node n = new Node();
+				Node<type> n = new Node<type>();
 				n.setData(data);
 				n.setLink(head);
 				curr = head = n;
@@ -179,11 +179,11 @@ public class List
 	// inserts an item after the current element
 	// the new element becomes the current
 	// this should not be possible for a full list
-	public void InsertAfter(String data)
+	public void InsertAfter(type data)
 	{
 		if(!IsFull())
 		{
-			Node n = new Node();
+			Node<type> n = new Node<type>();
 			n.setData(data);
 
 			if (IsEmpty())
@@ -236,7 +236,7 @@ public class List
 
 	// replaces the value of the current element with the specified value
 	// this should not be possible for an empty list
-	public void Replace(String data)
+	public void Replace(type data)
 	{
 		if(!IsEmpty())
 			curr.setData(data);
@@ -255,12 +255,12 @@ public class List
 	}
 
 	// returns if two lists are equal (by value)
-	public boolean Equals(List l)
+	public boolean Equals(List<type> l)
 	{
 		if(this.GetSize() != l.GetSize())
 			return false;
 		
-		Node a = head, b = l.head;
+		Node<type> a = head, b = l.head;
 		while(a != null && b != null)
 		{
 			if(a.getData() != b.getData())
@@ -276,10 +276,10 @@ public class List
 	// l should be concatenated to the end of *this
 	// the returned list should not exceed MAX_SIZE elements
 	// the last element of the new list is the current
-	public List Add(List l)
+	public List<type> Add(List<type> l)
 	{
-		List sum = new List(this);
-		Node temp = l.head;
+		List<type> sum = new List<type>(this);
+		Node<type> temp = l.head;
 		while (temp != null)
 		{
 			sum.InsertAfter(temp.getData());
@@ -297,7 +297,7 @@ public class List
 			return "NULL";
 		}
 		String result = "";
-		Node temp = head;
+		Node<type> temp = head;
 		while (temp != null)
 		{
 			result += (temp.getData() + " ");
