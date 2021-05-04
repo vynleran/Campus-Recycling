@@ -4,6 +4,11 @@ public class Edge {
     private Vertex start;
     private Vertex end;
 
+    public Edge(Vertex a, Vertex b){
+        this.start = a;
+        this.end = b;
+    }
+
     public Edge(int w, Vertex a, Vertex b){
         this.weight = w;
         this.start = a;
@@ -29,11 +34,11 @@ public class Edge {
     }
 
     // getters and setters for the vertex B
-    public Vertex getB(){
+    public Vertex getEnd(){
         return this.end;
     }
 
-    public void setB(Vertex name){
+    public void setEnd(Vertex name){
         this.end = name;
     }
 
@@ -48,7 +53,7 @@ public class Edge {
             output = start;
         }
         else{
-            return null;
+            throw new IllegalArgumentException("Illegal Vertex");
         }
 
         return output;

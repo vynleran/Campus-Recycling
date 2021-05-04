@@ -2,11 +2,12 @@ class Vertex
 {
 	private String data;
 	private boolean visited;
+	private int index;
 
 	// constructor
-	public Vertex()
+	public Vertex(String name)
 	{
-		this.data = " ";
+		this.data = name;
 		this.visited = false;
 	}
 
@@ -36,5 +37,10 @@ class Vertex
 	{
 		return this.data;	
 	}
+
+	// accessor and mutator for index component
+	public void setIndex(int i){ this.index = i;}
+
+	public int getIndex(){ return this.index; }
 
 }
