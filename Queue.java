@@ -7,35 +7,35 @@
  *************************************************** */
 
 
-class Queue
+class Queue<type>
 {
-	private List list;
+	private List<type> list;
 		
 	public Queue()
 	{
-		list = new List();
+		list = new List<type>();
 	}
 
-	public Queue(Queue s)
+	public Queue(Queue<type> s)
 	{
-		list = new List(s.list);
+		list = new List<type>(s.list);
 	}
 	
-	public void Enqueue(String data)
+	public void Enqueue(type data)
 	{
 		list.Last();
 		list.InsertAfter(data);
 	}
 
-	public String Dequeue()
+	public type Dequeue()
 	{
 		list.First();
-		String data = list.GetValue();
+		type data = list.GetValue();
 		list.Remove();
 		return data;
 	}
 
-	public String Peek()
+	public type Peek()
 	{
 		list.First();
 		return list.GetValue();
@@ -56,14 +56,14 @@ class Queue
 		return list.IsFull();
 	}
 
-	public boolean Equals(Queue s)
+	public boolean Equals(Queue<type> s)
 	{
 		return (list.Equals(s.list));
 	}
 
-	public Queue Add(Queue s)
+	public Queue<type> Add(Queue<type> s)
 	{
-		Queue newQueue = new Queue(this);
+		Queue<type> newQueue = new Queue<type>(this);
 		newQueue.list = newQueue.list.Add(s.list);
 		return newQueue;
 	}

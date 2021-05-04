@@ -7,36 +7,36 @@
  *************************************************** */
 
 
-class Stack
+class Stack<type>
 {
-	private List list;
+	private List<type> list;
 		
 	public Stack()
 	{
 
-		list = new List();
+		list = new List<type>();
 	}
 
-	public Stack(Stack s)
+	public Stack(Stack<type> s)
 	{
-		list = new List(s.list);
+		list = new List<type>(s.list);
 	}
 	
-	public void Push(String data)
+	public void Push(type data)
 	{
 		list.First();
 		list.InsertBefore(data);
 	}
 
-	public String Pop()
+	public type Pop()
 	{
 		list.First();
-		String data = list.GetValue();
+		type data = list.GetValue();
 		list.Remove();
 		return data;
 	}
 
-	public String Peek()
+	public type Peek()
 	{
 		list.First();
 		return list.GetValue();
@@ -57,14 +57,14 @@ class Stack
 		return list.IsFull();
 	}
 
-	public boolean Equals(Stack s)
+	public boolean Equals(Stack<type> s)
 	{
 		return (list.Equals(s.list));
 	}
 
-	public Stack Add(Stack s)
+	public Stack<type> Add(Stack<type> s)
 	{
-		Stack newStack = new Stack(this);
+		Stack<type> newStack = new Stack<type>(this);
 		newStack.list = newStack.list.Add(s.list);
 		return newStack;
 	}
