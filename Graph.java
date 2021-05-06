@@ -61,7 +61,7 @@ public class Graph {
         adjMat[end.getIndex()][start.getIndex()] = new Edge(end, start);
     }
 
-    public void addEdge(Vertex start, Vertex End, Int weight){
+    public void addEdge(Vertex start, Vertex end, int weight){
         int startIndex = start.getIndex();
         int endIndex = end.getIndex();
         Edge a = new Edge(start, end, weight);
@@ -84,7 +84,7 @@ public class Graph {
         vertexList.Last();
         numV++;
         vertexList.InsertAfter(newVertex);
-        vertexList.getValue().setIndex(vertexList.getPos());
+        vertexList.GetValue().setIndex(vertexList.GetPos());
         updateAdjMat();
     }
 
@@ -122,13 +122,13 @@ public class Graph {
     }
 
     // returns all outgoing edges of a vertex
-    public List incidentEdges(Vertex v)
+    public List<Edge> incidentEdges(Vertex v)
     {
-        List outgoingEdges = new List<Edge>();
+        List<Edge> outgoingEdges = new List<Edge>();
         for (int i = 0; i < adjMat.length; i++)
         {
             if (adjMat[v.getIndex()][i] != null)
-                outgoingEdges.insertAfter(adjMat[v.getIndex()][i]);
+                outgoingEdges.InsertAfter(adjMat[v.getIndex()][i]);
         }
         return outgoingEdges;
     }
