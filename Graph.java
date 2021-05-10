@@ -159,7 +159,7 @@ public class Graph {
             for(int i = 0; i < adjMat.length; i++)
             {
                 newVList.SetPos(i);
-                if ((adjMat[queue.Peek().getIndex()][i] != null) && (!newVListt.GetValue().getVisited()))
+                if ((adjMat[queue.Peek().getIndex()][i] != null) && (!newVList.GetValue().getVisited()))
                 {
                         newVList.GetValue().setVisited(true);
                         Vertex temp2 = adjMat[queue.Peek().getIndex()][i].opposite(queue.Peek());
