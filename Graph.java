@@ -149,6 +149,7 @@ public class Graph {
     {
         Vertex[] temp = new Vertex[numV];
         Queue<Vertex> queue = new Queue<>();
+        List<Vertex> newVList = vertexList;
 
         queue.Enqueue(n);
         n.setVisited(true);
@@ -157,10 +158,10 @@ public class Graph {
         {
             for(int i = 0; i < adjMat.length; i++)
             {
-                vertexList.SetPos(i);
-                if ((adjMat[queue.Peek().getIndex()][i] != null) && (!vertexList.GetValue().getVisited()))
+                newVList.SetPos(i);
+                if ((adjMat[queue.Peek().getIndex()][i] != null) && (!newVListt.GetValue().getVisited()))
                 {
-                        vertexList.GetValue().setVisited(true);
+                        newVList.GetValue().setVisited(true);
                         Vertex temp2 = adjMat[queue.Peek().getIndex()][i].opposite(queue.Peek());
                         temp[temp2.getIndex()] = queue.Peek();
                         queue.Enqueue(temp2);
@@ -169,11 +170,13 @@ public class Graph {
             queue.Dequeue();
         }
 
+        /*
         for (int i = 0; i < vertexList.GetSize(); i++)
         {
             vertexList.SetPos(i);
             vertexList.GetValue().setVisited(false);
         }
+        */
 
     }
 
