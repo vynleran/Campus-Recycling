@@ -177,4 +177,71 @@ public class Graph {
 
     }
 
+    // used <https://www.geeksforgeeks.org/prims-minimum-spanning-tree-mst-greedy-algo-5/> and 
+    // <https://algorithms.tutorialhorizon.com/prims-minimum-spanning-tree-mst-using-adjacency-matrix/>
+    // as references
+    public int Prim(Vertex n)
+    {
+        Vertex[] prim = new Vertex[numV];
+        int[] eCost = new int[numV];
+        boolean[] known = new boolean[numV];
+        int totDistance = 0;
+
+        for (int i = 0; i < eCost.length; i++)      // set every value in the matrix to "infinity"
+            cost[i] = Integer.MAX_VALUE;
+        eCost[n.getIndex()] = 0;
+
+        for (int i = 0; i < eCost.length; i++)
+        {
+            int temp = minVer(cost, known);
+            if (temp == -1)
+                continue;
+            known[temp] = true;
+
+            for(int j = 0; j < adjMat.length; j++)
+            {
+                if(adjMat[next][j] != null && !known[j])
+                {
+                    eCost[j] = adjMat[next][j].getWeight();
+                    vertexList.SetPos(next);
+                    prim[j] = vertexList.GetValue();
+                }
+            }
+            totDistance = totDistance + eCost[next];
+
+        }
+        return totDistance;
+
+    }
+
+    public int minVer(int[] eCost, boolean[] known)
+    {
+        int min = Integer.MAX_VALUE;
+        int minIndex = -1;
+        for (int i = 0; i < eCost.length; i++)
+        {
+            if((eCost[i] < min) && !known[i])
+            {
+                minIndex = 1;
+                min = eCost[i];
+            }
+        }
+        return minIndex;
+    }
+
+    public int maxVer(int[] eCost, boolean[] known)
+    {
+        int max = Integer.MIN_VALUE;        // "negative" infinity
+        int maxIndex = -1;
+        for (int i = 0; i < eCost.length; i++)
+        {
+            if((eCost[i] > max) && !known[i])
+            {
+                maxIndex = 1;
+                max = eCost[i];
+            }
+        }
+        return maxIndex;
+    }
+
 }
