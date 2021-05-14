@@ -104,12 +104,6 @@ public class Graph {
         }
     }
 
-    // removes a vertex from the graph
-    public void removeVertex(){
-        // removing the vertex
-        numV--;
-    }
-
     // return the degree of a vertex
     public int degree(int row){
         int degree = 0;
@@ -175,41 +169,6 @@ public class Graph {
             (vertexList.GetValue()).setVisited(false);
         }
         g.printPath(g, parents, u);
-    }
-
-    public void BFS(Graph g, Vertex n)
-    {
-        Vertex[] temp = new Vertex[numV];
-        Queue<Vertex> queue = new Queue<>();
-        List<Vertex> newVList = vertexList;
-
-        queue.Enqueue(n);
-        n.setVisited(true);
-
-        while(!queue.IsEmpty())
-        {
-            for(int i = 0; i < adjMat.length; i++)
-            {
-                newVList.SetPos(i);
-                if ((adjMat[queue.Peek().getIndex()][i] != null) && (!newVList.GetValue().getVisited()))
-                {
-                        newVList.GetValue().setVisited(true);
-                        Vertex temp2 = adjMat[queue.Peek().getIndex()][i].opposite(queue.Peek());
-                        temp[temp2.getIndex()] = queue.Peek();
-                        queue.Enqueue(temp2);
-                }
-            }
-            queue.Dequeue();
-        }
-
-        /*
-        for (int i = 0; i < vertexList.GetSize(); i++)
-        {
-            vertexList.SetPos(i);
-            vertexList.GetValue().setVisited(false);
-        }
-        */
-        g.printPath(g, temp, n);
     }
 
     public void dijkstra(Graph g, Vertex u)
@@ -339,7 +298,6 @@ public class Graph {
                 continue;
             known[next] = true;
 
-            //had to borrow this second for loop from Austin
             for (int k = 0; k < adjMat.length; k++)
             {
                 if (adjMat[next][k] != null && !known[k])
@@ -352,6 +310,43 @@ public class Graph {
             distance = distance + cost[next];
         }
         System.out.println("The distance for the Minimum Spanning Tree is: " + distance);
+        printPath(g, mst, u);
+        return distance;
+    }
+
+    // lol this is basically the opposite of prim
+    public int maxST(Graph g, Vertex u)
+    {
+        Vertex[] mst = new Vertex[numV]; //store mst array
+        int[] cost = new int[numV]; //used to pick min weight
+        boolean[] known = new boolean[numV];
+
+        for (int i = 0; i < cost.length ; i++)
+            cost[i] = Integer.MIN_VALUE; //makes all infinity
+
+        cost[u.getIndex()] = 0; //making the key 0 so the first index picked is zero
+
+        int distance = 0;
+        for (int i = 0; i < cost.length ; i++)
+        {
+            int next = (findMaxVertex(cost, known)); //calls minVertex and adds in the minMST and key
+            if (next == -1)
+                continue;
+            known[next] = true;
+
+            for(int k = 0; k < adjMat.length; k++)
+            {
+                if (adjMat[next][k] != null && !known[k])
+                {
+                    cost[k] = adjMat[next][k].getWeight();
+                    vertexList.SetPos(next);
+                    mst[k] = vertexList.GetValue();
+                }
+            }
+            distance = distance + cost[i];
+        }
+        System.out.println("The distance for the Maximum Spanning Tree is: " + distance);
+        //System.out.println("It's total cost was: " + totalCost);
         printPath(g, mst, u);
         return distance;
     }
