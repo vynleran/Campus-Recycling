@@ -1,0 +1,40 @@
+Bogard,Engineering Annex,115
+Bogard,Howard Center for Performing Arts,354
+Bogard,Nethken,335
+Bogard,College of Business,956
+IESB,College of Business,250
+IESB,Nethken,350
+Nethken,IESB,350
+Nethken,Bogard,335
+Nethken,College of Business,780
+Carson Taylor,Howard Center for Performing Arts,176
+Carson Taylor,Davidson,1564
+Carson Taylor,Engineering Annex,263
+GTM,Hale Hall,302
+GTM,University Hall,2716
+Visual Arts Center,BioMed,751
+Visual Arts Center,Memorial Gym,723
+Hale Hall,GTM,682
+Hale Hall,Memorial Gym,302
+College of Business,IESB,250
+College of Business,Nethken,780
+College of Business,Bogard,956
+College of Business,University Hall,708
+Davidson,BioMed,472
+Davidson,Carson Taylor,1564
+BioMed,Davidson,472
+BioMed,Visual Arts Center,751
+Engineering Annex,Carson Taylor,263
+Engineering Annex,Bogard,115
+Woodard,GTM,570
+Woodard,Memorial Gym,364
+Robinson,GTM,340
+Robinson,Memorial Gym,276
+University Hall,GTM,2716
+University Hall,Bogard,1049
+Memorial Gym,Hale Hall,302
+Memorial Gym,Robinson,276
+Memorial Gym,Woodard,364
+Memorial Gym,Visual Arts Center,723
+Howard Center for Performing Arts,Bogard,354
+Howard Center for Performing Arts,Carson Taylor,176
