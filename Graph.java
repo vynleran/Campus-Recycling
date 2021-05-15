@@ -138,6 +138,32 @@ public class Graph {
         }
         return result;
     }
+    public void BFS(Graph g, Vertex n)
+    {
+        Vertex[] temp = new Vertex[numV];
+        Queue<Vertex> queue = new Queue<>();
+        List<Vertex> newVList = vertexList;
+
+        queue.Enqueue(n);
+        n.setVisited(true);
+
+        while(!queue.IsEmpty())
+        {
+            for(int i = 0; i < adjMat.length; i++)
+            {
+                newVList.SetPos(i);
+                if ((adjMat[queue.Peek().getIndex()][i] != null) && (!newVList.GetValue().getVisited()))
+                {
+                        newVList.GetValue().setVisited(true);
+                        Vertex temp2 = adjMat[queue.Peek().getIndex()][i].opposite(queue.Peek());
+                        temp[temp2.getIndex()] = queue.Peek();
+                        queue.Enqueue(temp2);
+                }
+            }
+            queue.Dequeue();
+        }
+        g.printPath(g, temp, n);
+    }
 
     public void DFS(Graph g, Vertex u)
     {
