@@ -15,10 +15,8 @@ public class Main {
         for(int i = 0; i < arrayString.length; i++)
         {
             map.addVertex(arrayString[i]);
-            System.out.println(arrayString[i]);
         }
 
-        //System.out.println(Arrays.toString(arrayString));
 
         Scanner user = new Scanner(System.in);
         System.out.println("Path to which building: ");
