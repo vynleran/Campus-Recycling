@@ -18,8 +18,26 @@ public class Main {
         }
 
 
-        Scanner user = new Scanner(System.in);
-        System.out.println("Path to which building: ");
-        String userInput = user.nextLine(); // scanning user input
+        File edges = new File("edges.csv");
+        Scanner edgesInput = new Scanner(edges);
+        
+        while(edgesInput.hasNextLine())
+        {
+            String currentEdge = edgesInput.nextLine();
+            String edge[] = currentEdge.split(",");
+
+            Vertex begin = map.findVertex(edge[0]);
+            
+            Vertex ending = map.findVertex(edge[1]);
+            int verWeight = Integer.parseInt(edge[2]);
+
+
+            map.addEdge(begin, ending);
+
+        }
+
+        //Scanner user = new Scanner(System.in);
+        //System.out.println("Path to which building: ");
+       // String userInput = user.nextLine(); // scanning user input
     }
 }

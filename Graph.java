@@ -88,6 +88,19 @@ public class Graph {
         updateAdjMat();
     }
 
+    public Vertex findVertex(String data)
+    {
+        for (int i = 0; i < vertexList.GetSize(); i++)
+        {
+            vertexList.SetPos(i);
+            if (vertexList.GetValue().getData().compareTo(data) == 0)
+                return vertexList.GetValue();
+        }
+
+        //System.out.println("Vertex not found.");
+        return null;
+    }
+
     public void updateAdjMat()
     {
         Edge[][] oldAdjMat = adjMat;

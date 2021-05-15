@@ -39,8 +39,12 @@ class Vertex
 	}
 
 	// accessor and mutator for index component
-	public void setIndex(int i){ this.index = i;}
+	public void setIndex(int index){
+		 this.index = index;
+		}
 
-	public int getIndex(){ return this.index; }
+	public int getIndex(){ 
+		return this.index; 
+	}
 
 }
