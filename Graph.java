@@ -210,11 +210,12 @@ public class Graph {
         g.printPath(g, parents, u);
     }
 
-    public void dijkstra(Graph g, Vertex u)
+    public int dijkstra(Graph g, Vertex u)
     {
         boolean[] known = new boolean[numV]; // all false initially;
         int[] cost = new int[numV]; // shortest known distance from "s"
         Vertex[] path = new Vertex[numV]; // preceding Vertex in path;
+        int distance = 0;
 
         // initialize the arrays
         for (int i = 1; i < known.length; i++)
@@ -253,9 +254,11 @@ public class Graph {
                     }
                 }
             }
+            //
         }
-
+        //System.out.println("The distance for the Dijkstra Tree is: " + distance + " feet.");
         g.printPath(g, path, u);
+        return distance;
     }
 
     public void printPath(Graph g, Vertex[] path, Vertex u)
@@ -348,7 +351,7 @@ public class Graph {
             }
             distance = distance + cost[next];
         }
-        System.out.println("The distance for the Minimum Spanning Tree is: " + distance);
+        System.out.println("The distance for the Minimum Spanning Tree is: " + distance + " feet.");
         printPath(g, mst, u);
         return distance;
     }
@@ -384,7 +387,7 @@ public class Graph {
             }
             distance = distance + cost[i];
         }
-        System.out.println("The distance for the Maximum Spanning Tree is: " + distance);
+        System.out.println("The distance for the Maximum Spanning Tree is: " + distance + " feet.");
         //System.out.println("It's total cost was: " + totalCost);
         printPath(g, mst, u);
         return distance;

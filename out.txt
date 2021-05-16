@@ -1,4 +1,5 @@
 Dijkstra
+--------------------------------
 Carson Taylor Engineering Annex Bogard 
 Carson Taylor Engineering Annex Bogard Nethken IESB 
 Carson Taylor Engineering Annex Bogard Nethken 
@@ -16,10 +17,11 @@ Carson Taylor Engineering Annex Bogard University Hall
 Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym 
 Carson Taylor Howard Center for Performing Arts 
 
-The time for Dijkstra: 20 ms.
+The time for Dijkstra: 1 ms.
 
 Prim-Jarnik
-The distance for the Minimum Spanning Tree is: 7219
+--------------------------------
+The distance for the Minimum Spanning Tree is: 7219 feet.
 Carson Taylor Engineering Annex Bogard 
 Carson Taylor Engineering Annex Bogard Nethken IESB 
 Carson Taylor Engineering Annex Bogard Nethken 
@@ -39,11 +41,10 @@ Carson Taylor Howard Center for Performing Arts
 
 The time for Prim-Jarnik: 1 ms.
 
-Prim-Jarnik is faster than Dijkstra.
 
 Max Spanning Tree
-________________________________
-The distance for the Maximum Spanning Tree is: 8789
+--------------------------------
+The distance for the Maximum Spanning Tree is: 8789 feet.
 Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Woodard GTM University Hall Bogard 
 Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Woodard GTM University Hall Bogard College of Business Nethken IESB 
 Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Woodard GTM University Hall Bogard College of Business Nethken 
@@ -63,7 +64,7 @@ Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Woodard GTM Univer
 
 
 DFS
-________________________________
+--------------------------------
 Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Hale Hall GTM University Hall Bogard 
 Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Hale Hall GTM University Hall Bogard Nethken IESB 
 Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Hale Hall GTM University Hall Bogard Nethken 
@@ -83,7 +84,7 @@ Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Hale Hall GTM Univ
 
 
 BFS
-________________________________
+--------------------------------
 Carson Taylor Engineering Annex Bogard 
 Carson Taylor Engineering Annex Bogard Nethken IESB 
 Carson Taylor Engineering Annex Bogard Nethken 

@@ -29,20 +29,22 @@ public class Main {
         }
 
         Scanner userInput = new Scanner(System.in);
-        System.out.println("What is your starting building? ");
+        System.out.print("What is your starting building? ");
         String input = userInput.nextLine();
+        System.out.println(" ");
         Vertex startingVertex = map.findVertex(input);
 
-        /* PrintStream console = System.out;
+        /*PrintStream console = System.out;
 		File file = new File("out.txt");
 		FileOutputStream output = new FileOutputStream(file);
 		PrintStream print = new PrintStream(output);
-		System.setOut(print); */
+		System.setOut(print);*/
 
 
         if (startingVertex != null)
         {
             System.out.println("Dijkstra");
+            System.out.println("--------------------------------");
             long startTimeDijkstra = System.currentTimeMillis();
             map.dijkstra(map, startingVertex);
             System.out.println();
@@ -52,8 +54,9 @@ public class Main {
             System.out.println();
 
             System.out.println("Prim-Jarnik");
+            System.out.println("--------------------------------");
             long startTimePrim = System.currentTimeMillis();
-            map.primMST(map, startingVertex);
+            int distancePrim = map.primMST(map, startingVertex);
             System.out.println();
             long endTimePrim = System.currentTimeMillis();
             long elapsedTimePrim = endTimePrim - startTimePrim;
@@ -64,21 +67,26 @@ public class Main {
             if (elapsedTimePrim < elapsedTimeDijkstra)
                 System.out.println("Prim-Jarnik is faster than Dijkstra.");
 
+            /*if (distanceDij < distancePrim)
+                System.out.println("Dijkstra has a shorter path.");
+            if (distanceDij > distancePrim)
+                System.out.println("Prim-Jarnik has a shorter path."); */
+
             System.out.println();
             System.out.println("Max Spanning Tree");
-            System.out.println("________________________________");
+            System.out.println("--------------------------------");
             map.maxST(map, startingVertex);
             System.out.println();
 
             System.out.println();
             System.out.println("DFS");
-            System.out.println("________________________________");
+            System.out.println("--------------------------------");
             map.DFS(map, startingVertex);
             System.out.println();
             System.out.println();
 
             System.out.println("BFS");
-            System.out.println("________________________________");
+            System.out.println("--------------------------------");
             map.BFS(map, startingVertex);
             System.out.println();
             System.out.println();
@@ -86,8 +94,8 @@ public class Main {
 
         else System.out.println("Invalid input homie :(");
 
-        //System.setOut(console);
-		//System.out.println("Output sent to out.txt");
+        /*System.setOut(console);
+		System.out.println("Output sent to out.txt");*/
 
     }
 }
