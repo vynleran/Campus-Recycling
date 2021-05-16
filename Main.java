@@ -7,37 +7,77 @@ public class Main {
 
     public static void main(String args[]) throws Exception{
 
-        String buildings = " ";
         Graph map = new Graph();
-        buildings = new String(Files.readAllBytes(Paths.get("vertices.txt")));
-        String[] arrayString = buildings.split("\\r?\\n");
+        File vertices = new File("vertices.txt");
+        Scanner verticesInput = new Scanner(vertices);
+        String[] vertex = verticesInput.nextLine().split(",");
+        for (String s : vertex)
+            map.addVertex(s);
 
-        for(int i = 0; i < arrayString.length; i++)
-        {
-            map.addVertex(arrayString[i]);
-        }
-
+        map.makeAdjMat(vertex.length);
 
         File edges = new File("edges.csv");
         Scanner edgesInput = new Scanner(edges);
-        
-        while(edgesInput.hasNextLine())
+        while (edgesInput.hasNextLine())
         {
             String currentEdge = edgesInput.nextLine();
-            String edge[] = currentEdge.split(",");
-
-            Vertex begin = map.findVertex(edge[0]);
-            
-            Vertex ending = map.findVertex(edge[1]);
-            int verWeight = Integer.parseInt(edge[2]);
-
-
-            map.addEdge(begin, ending);
-
+            String[] edge = currentEdge.split(",");
+            Vertex origin = map.findVertex(edge[0]);
+            Vertex destination = map.findVertex(edge[1]);
+            int weight = Integer.parseInt(edge[2]);
+            map.addEdge(origin, destination, weight);
         }
 
-        //Scanner user = new Scanner(System.in);
-        //System.out.println("Path to which building: ");
-       // String userInput = user.nextLine(); // scanning user input
+        Scanner userInput = new Scanner(System.in);
+        System.out.println("What is your starting building? ");
+        String input = userInput.nextLine();
+        Vertex startingVertex = map.findVertex(input);
+
+        if (startingVertex != null)
+        {
+            System.out.println("Dijkstra");
+            long startTimeDijkstra = System.currentTimeMillis();
+            map.dijkstra(map, startingVertex);
+            System.out.println();
+            long endTimeDijkstra = System.currentTimeMillis();
+            long elapsedTimeDijkstra = endTimeDijkstra - startTimeDijkstra;
+            System.out.println("The time for Dijkstra: " + elapsedTimeDijkstra + " ms.");
+            System.out.println();
+
+            System.out.println("Prim-Jarnik");
+            long startTimePrim = System.currentTimeMillis();
+            map.primMST(map, startingVertex);
+            System.out.println();
+            long endTimePrim = System.currentTimeMillis();
+            long elapsedTimePrim = endTimePrim - startTimePrim;
+            System.out.println("The time for Prim-Jarnik: " + elapsedTimePrim + " ms.");
+            System.out.println();
+            if (elapsedTimeDijkstra < elapsedTimePrim)
+                System.out.println("Dijkstra is faster than Prim-Jarnik.");
+            if (elapsedTimePrim < elapsedTimeDijkstra)
+                System.out.println("Prim-Jarnik is faster than Dijkstra.");
+
+            System.out.println();
+            System.out.println("Max Spanning Tree");
+            System.out.println("________________________________");
+            map.maxST(map, startingVertex);
+            System.out.println();
+
+            System.out.println();
+            System.out.println("DFS");
+            System.out.println("________________________________");
+            map.DFS(map, startingVertex);
+            System.out.println();
+            System.out.println();
+
+            System.out.println("BFS");
+            System.out.println("________________________________");
+            map.BFS(map, startingVertex);
+            System.out.println();
+            System.out.println();
+        }
+
+        else System.out.println("Invalid input homie :(");
+
     }
 }

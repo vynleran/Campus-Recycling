@@ -1,16 +1,1 @@
-Bogard
-IESB
-Nethken
-Carson Taylor
-GTM
-Visual Arts Center
-Hale Hall
-College of Business
-Davidson
-BioMed
-Engineering Annex
-Woodard
-Robinson
-University Hall
-Memorial Gym
-Howard Center for Performing Arts
+Bogard,IESB,Nethken,Carson Taylor,GTM,Visual Arts Center,Hale Hall,College of Business,Davidson,BioMed,Engineering Annex,Woodard,Robinson,University Hall,Memorial Gym,Howard Center for Performing Arts
