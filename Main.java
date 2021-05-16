@@ -33,6 +33,13 @@ public class Main {
         String input = userInput.nextLine();
         Vertex startingVertex = map.findVertex(input);
 
+        /* PrintStream console = System.out;
+		File file = new File("out.txt");
+		FileOutputStream output = new FileOutputStream(file);
+		PrintStream print = new PrintStream(output);
+		System.setOut(print); */
+
+
         if (startingVertex != null)
         {
             System.out.println("Dijkstra");
@@ -78,6 +85,9 @@ public class Main {
         }
 
         else System.out.println("Invalid input homie :(");
+
+        //System.setOut(console);
+		//System.out.println("Output sent to out.txt");
 
     }
 }

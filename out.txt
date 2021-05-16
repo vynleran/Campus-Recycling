@@ -1,0 +1,104 @@
+Dijkstra
+Carson Taylor Engineering Annex Bogard 
+Carson Taylor Engineering Annex Bogard Nethken IESB 
+Carson Taylor Engineering Annex Bogard Nethken 
+Carson Taylor
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Robinson GTM 
+Carson Taylor Davidson BioMed Visual Arts Center 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Hale Hall 
+Carson Taylor Engineering Annex Bogard Nethken IESB College of Business 
+Carson Taylor Davidson 
+Carson Taylor Davidson BioMed 
+Carson Taylor Engineering Annex 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Woodard 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Robinson 
+Carson Taylor Engineering Annex Bogard University Hall 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym 
+Carson Taylor Howard Center for Performing Arts 
+
+The time for Dijkstra: 20 ms.
+
+Prim-Jarnik
+The distance for the Minimum Spanning Tree is: 7219
+Carson Taylor Engineering Annex Bogard 
+Carson Taylor Engineering Annex Bogard Nethken IESB 
+Carson Taylor Engineering Annex Bogard Nethken 
+Carson Taylor
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Woodard GTM 
+Carson Taylor Davidson BioMed Visual Arts Center 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Hale Hall 
+Carson Taylor Engineering Annex Bogard Nethken IESB College of Business 
+Carson Taylor Davidson 
+Carson Taylor Davidson BioMed 
+Carson Taylor Engineering Annex 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Woodard 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Robinson 
+Carson Taylor Engineering Annex Bogard Nethken IESB College of Business University Hall 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym 
+Carson Taylor Howard Center for Performing Arts 
+
+The time for Prim-Jarnik: 1 ms.
+
+Prim-Jarnik is faster than Dijkstra.
+
+Max Spanning Tree
+________________________________
+The distance for the Maximum Spanning Tree is: 8789
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Woodard GTM University Hall Bogard 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Woodard GTM University Hall Bogard College of Business Nethken IESB 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Woodard GTM University Hall Bogard College of Business Nethken 
+Carson Taylor
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Woodard GTM 
+Carson Taylor Davidson BioMed Visual Arts Center 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Woodard GTM Hale Hall 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Woodard GTM University Hall Bogard College of Business 
+Carson Taylor Davidson 
+Carson Taylor Davidson BioMed 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Woodard GTM University Hall Bogard Engineering Annex 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Woodard 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Woodard GTM Robinson 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Woodard GTM University Hall 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Woodard GTM University Hall Bogard Howard Center for Performing Arts 
+
+
+DFS
+________________________________
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Hale Hall GTM University Hall Bogard 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Hale Hall GTM University Hall Bogard Nethken IESB 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Hale Hall GTM University Hall Bogard Nethken 
+Carson Taylor
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Hale Hall GTM 
+Carson Taylor Davidson BioMed Visual Arts Center 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Hale Hall 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Hale Hall GTM University Hall Bogard Nethken IESB College of Business 
+Carson Taylor Davidson 
+Carson Taylor Davidson BioMed 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Hale Hall GTM University Hall Bogard Engineering Annex 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Hale Hall GTM Woodard 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Hale Hall GTM Robinson 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Hale Hall GTM University Hall 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Hale Hall GTM University Hall Bogard Howard Center for Performing Arts 
+
+
+BFS
+________________________________
+Carson Taylor Engineering Annex Bogard 
+Carson Taylor Engineering Annex Bogard Nethken IESB 
+Carson Taylor Engineering Annex Bogard Nethken 
+Carson Taylor
+Carson Taylor Engineering Annex Bogard University Hall GTM 
+Carson Taylor Davidson BioMed Visual Arts Center 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Hale Hall 
+Carson Taylor Engineering Annex Bogard College of Business 
+Carson Taylor Davidson 
+Carson Taylor Davidson BioMed 
+Carson Taylor Engineering Annex 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Woodard 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym Robinson 
+Carson Taylor Engineering Annex Bogard University Hall 
+Carson Taylor Davidson BioMed Visual Arts Center Memorial Gym 
+Carson Taylor Howard Center for Performing Arts 
+
+
